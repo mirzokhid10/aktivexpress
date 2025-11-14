@@ -21,7 +21,7 @@ $this->title = 'My Yii Application';
         <?= $this->render('_calculation') ?>
         <?= $this->render('_features') ?>
         <?= $this->render('_services') ?>
-
+<!--salom-->
         <?= $this->render('_order_methods') ?>
         <?= $this->render('_partners') ?>
         <?= $this->render('_contact') ?>
