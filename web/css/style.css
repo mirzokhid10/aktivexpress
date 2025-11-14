@@ -1,0 +1,559 @@
+body {
+    background-color: #EAECF5;
+}
+
+/* Header CSS Starts Here */
+
+.header_login-btn {
+    background-color: #FF6010;
+}
+
+.header_login-btn:hover {
+    background-color: #CC4D0D;
+}
+
+/* Header CSS Ends Here */
+
+/* Header Pop Up Model CSS Starts Here */
+
+.login-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.login-subtitle {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+.form-label {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.form-control:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+}
+
+.btn-login {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+.btn-login:hover {
+    background-color: #E64A19;
+}
+
+.bottom-bar {
+    background-color: #2196F3;
+    height: 4px;
+    width: 60%;
+    margin: 30px auto 0;
+    border-radius: 2px;
+}
+
+/* Header Pop Up Model CSS Ends Here */
+
+.birun-nav {
+    background-color: #0C27C0;
+    height: 80px;
+}
+
+.birun-nav .navbar-nav .nav-link {
+    color: #ffffff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.padding-top {
+    padding-top: 5rem;
+}
+
+.birun-head-text, .birun-head-img {
+
+}
+
+.birun-head-img img {
+    width: 100%;
+}
+
+.birun-head-text h1 {
+    font-size: 4.3rem;
+}
+
+.birun-head-text p {
+    font-size: 20px;
+    color: #535862;
+}
+
+form.birun-search-barcode {
+    margin-top: 50px;
+}
+
+#searchBarcode {
+    width: 300px;
+}
+
+.btn-search-barcode:disabled {
+    background-color: #FF6010;
+}
+
+.btn-search-barcode {
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: #FF6010;
+    --bs-btn-border-color: #FF6010;
+    --bs-btn-hover-color: #FFFFFF;
+    --bs-btn-hover-bg: #db530f;
+    --bs-btn-hover-border-color: #db530f;
+    --bs-btn-focus-shadow-rgb: #FF6010;
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-bg: #b84207;
+    --bs-btn-active-border-color: #b84207;
+}
+
+.birun-feature-block .card {
+    padding: 0 1rem;
+    border-radius: 0.8rem;
+}
+
+.birun-service-block .card {
+
+}
+
+.birun-service-block .card, .card-radius-08 {
+    border-radius: 0.8rem;
+}
+
+.birun-service-block .card .card-body {
+    padding: 1.5rem;
+}
+
+.card-bg-blue {
+    background-color: #0C28C9;
+    color: #FFFFFF;
+}
+
+.card-bg-blue .card-body {
+    width: 60%;
+    margin: 0 20%;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.nav-link .bi {
+    margin-left: 5px;
+}
+
+.nav-link:hover {
+    color: #FF6010 !important;
+}
+
+.bi::before {
+    font-weight: 600 !important;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #FF6010;
+}
+
+p.font-size-40p {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+p.font-size-32p {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.birun-service-block .birun-service-icon {
+    margin-bottom: 40px;
+}
+
+.w70-p {
+    width: 70%;
+}
+.h100-p {
+    height: 100%;
+}
+
+.birun-block-header {
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+.birun-blue-text {
+    color: #0C27C0;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 1rem;
+    line-height: 1.3rem;
+}
+
+.birun-gray-text {
+    color: #535862;
+    font-size: 16px;
+    line-height: 1.2rem;
+}
+
+.birun-service-card {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.birun-order-card {
+
+}
+
+.birun-order-card .card-body {
+    padding: 72px 30px;
+}
+
+.birun-order-card .birun-service-icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 32px;
+}
+
+.order-box {
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 34px;
+}
+
+.birun-partners-block .card-body {
+    padding: 65px 35px 30px;
+}
+
+.birun-partners-block .partner-box {
+    padding: 0 50px 0 10px;
+}
+
+.birun-partners-block img {
+    height: 48px;
+    margin-bottom: 24px;
+}
+
+.birun-partner-title {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.birun-partner-link {
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.contact-us-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.contact-us-title-mini {
+    font-size: 16px;
+    color: #808080;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.contact-us-phone {
+    font-size: 30px;
+    font-weight: 600;
+    color: #0c28c9;
+}
+
+.contact-us-link {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.contact-us-link a {
+    color: #0c28c9;
+    text-decoration: none;
+}
+
+.birun-contact-us .card-bg-blue .card-body {
+    padding: 55px 16px;
+}
+
+.contact-us-phone-img {
+    margin-bottom: 60px;
+}
+
+.contact-us-img {
+    margin-bottom: 65px;
+}
+
+.padding-15-rem {
+    padding: 1.5rem;
+}
+
+
+/* CSS For Calculator*/
+
+
+.calculation_title {
+    color: #0C27C0;
+}
+
+
+.main-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.service-item {
+    background-color: #fff;
+    border: 1px solid #E9EAEB;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+
+.service-item:hover {
+    background-color: #fee2e2;
+}
+
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+
+.icon-home {
+    background-color: #fed7aa;
+    color: #ea580c;
+}
+
+
+.icon-user {
+    background-color: #fecaca;
+    color: #dc2626;
+}
+
+
+.icon-truck {
+    background-color: #fecaca;
+    color: #dc2626;
+}
+
+
+.btn-primary-custom {
+    background-color: #0C28C9;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+
+.btn-primary-custom:hover {
+    background-color: #1d4ed8;
+}
+
+
+.calculation_custom-bg {
+    background-color: #F5F5F5;
+}
+
+
+.btn-orange {
+    background-color: #f97316;
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+.btn-orange:hover {
+    background-color: #ea580c;
+
+
+}
+
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 10px 14px;
+}
+
+
+.form-control:focus, .form-select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+.weight-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.weight-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #6b7280;
+    position: absolute;
+}
+
+
+.weight-btn:hover {
+    background-color: #f9fafb;
+}
+
+
+.weight-input {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px;
+    outline: none;
+    height: 44px;
+}
+
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+.info-badge {
+    background-color: #eff6ff;
+    color: #1e40af;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.radio-circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    margin-left: auto;
+}
+
+/* Footer CSS Goes Here */
+
+/* Footer Styles */
+.footer-top {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-heading {
+    color: #FF6010;
+    font-weight: 600;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+.footer-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #FF6010;
+}
+
+.footer-bottom {
+    background-color: #0C27C0;
+    padding: 30px 0;
+}
+
+.footer-copyright {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.footer-size-badge {
+    background-color: #1E40AF;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.footer-social-icon {
+    color: #ffffff;
+    font-size: 24px;
+    transition: opacity 0.3s;
+}
+
+.footer-social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Footer CSS Ends Here */
