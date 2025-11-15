@@ -55,6 +55,15 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionSetLanguage($lang)
+    {
+        if (in_array($lang, ['uz', 'uz_cyrl', 'en', 'ru'])) {
+            Yii::$app->language = $lang;
+            Yii::$app->session->set('language', $lang);
+        }
+        return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
+    }
+
     /**
      * Displays homepage.
      *

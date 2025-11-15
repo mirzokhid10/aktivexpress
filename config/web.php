@@ -7,6 +7,9 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'sourceLanguage' => 'en',
+    'language' => 'xx',
+
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -19,11 +22,11 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'eskiz' => [
-            'class' => 'app\components\EskizComponent',
-            'email' => 'mxudoyberdiyev21@gmail.com',
-            'password' => 'mehrjon18134',
+
+        'session' => [
+            'class' => 'yii\web\Session',
         ],
+
         'user' => [
             'identityClass' => 'app\models\Users',
             'enableAutoLogin' => true,
@@ -49,14 +52,92 @@ $config = [
         'db' => $db,
 
         'urlManager' => [
+            'class' => 'codemix\localeurls\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'languages' => [
+                'uz_cyrl',
+                'uz',
+                'ru',
+                'en',
+            ],
             'rules' => [
             ],
         ],
 
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'on missingTranslation' => function($event) {
+                        Yii::warning("Missing translation: {$event->message} in category {$event->category}", __METHOD__);
+                    },
+
+                    'fileMap' => [
+                        'app' => 'header.php',
+                        'main' => 'header.php',
+
+                    ]
+                ],
+                'hero*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'on missingTranslation' => function($event) {
+                        Yii::warning("Missing translation: {$event->message} in category {$event->category}", __METHOD__);
+                    },
+
+                    'fileMap' => [
+                        'hero' => 'hero.php',
+                    ],
+
+                ],
+                'calc*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'calc' => 'calculation.php',
+                    ],
+                ],
+                'feat*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'feat' => 'feature.php',
+                    ],
+                ],
+                'serv*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'serv' => 'services.php',
+                    ],
+                ],
+                'order*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'order' => 'order.php',
+                    ],
+                ],
+
+            ]
+        ]
+
+
     ],
     'params' => $params,
+    'on beforeRequest' => function () {
+        $lang = Yii::$app->session->get('language');
+
+        if (!$lang) {
+            $lang = 'uz'; // your main default language
+            Yii::$app->session->set('language', $lang);
+        }
+
+        Yii::$app->language = $lang;
+    },
+
 ];
 
 if (YII_ENV_DEV) {

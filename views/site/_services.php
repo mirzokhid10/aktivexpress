@@ -1,5 +1,6 @@
+
 <div class="birun-service-block">
-    <h1 class="birun-block-header">Xizmatlarimiz</h1>
+    <h1 class="birun-block-header"><?= Yii::t('serv', 'Our Services') ?></h1>
     <div class="row">
         <div class="col-md-7">
             <div class="card">
@@ -10,8 +11,8 @@
             <div class="card h100-p">
                 <div class="card-body">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/service_box_parcel.png', ['alt' => 'logo', 'class' => 'birun-service-icon']) ?>
-                    <p class="birun-blue-text">Xavfsiz va mustahkam upakovka</p>
-                    <p class="birun-gray-text w70-p">Posilkangiz buzilmasdan va zarar yetkazilmasdan yetkaziladi.</p>
+                    <p class="birun-blue-text"><?= Yii::t('serv', 'Safe and secure packaging') ?></p>
+                    <p class="birun-gray-text w70-p"><?= Yii::t('serv', 'Your parcel will be delivered without damage or harm.') ?></p>
                 </div>
             </div>
         </div>
@@ -22,8 +23,8 @@
             <div class="card h100-p">
                 <div class="card-body">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/programm.png', ['alt' => 'logo', 'class' => 'birun-service-icon']) ?>
-                    <p class="birun-blue-text">Qulay to‘lov tizimi</p>
-                    <p class="birun-gray-text w70-p">To‘lovni jo‘natuvchi yoki qabul qiluvchi amalga oshirishi mumkin.</p>
+                    <p class="birun-blue-text"><?= Yii::t('serv', 'Convenient payment system') ?></p>
+                    <p class="birun-gray-text w70-p"><?= Yii::t('serv', 'Payment can be made by the sender or the recipient.') ?></p>
                 </div>
             </div>
         </div>
@@ -32,8 +33,8 @@
                 <div class="card-body">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/human.png', ['alt' => 'logo', 'class' => 'birun-service-icon']) ?>
 
-                    <p class="birun-blue-text">Kuryerlik xizmati</p>
-                    <p class="birun-gray-text w70-p mb-0">Posilkangizni sizdan olib ketamiz yoki to‘g‘ridan-to‘g‘ri manzilga yetkazamiz.</p>
+                    <p class="birun-blue-text"><?= Yii::t('serv', 'Courier service') ?></p>
+                    <p class="birun-gray-text w70-p mb-0"><?= Yii::t('serv', 'We will pick up your parcel from you or deliver it directly to the address.') ?></p>
                 </div>
             </div>
 
@@ -43,8 +44,8 @@
                 <div class="card-body">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/transport.png', ['alt' => 'logo', 'class' => 'birun-service-icon']) ?>
 
-                    <p class="birun-blue-text">Katta hajmli yuklarni tashish</p>
-                    <p class="birun-gray-text w70-p">Yirik yuklaringizni tez va ishonchli yetkazamiz.</p>
+                    <p class="birun-blue-text"><?= Yii::t('serv', 'Transportation of bulky goods') ?></p>
+                    <p class="birun-gray-text w70-p"><?= Yii::t('serv', 'We deliver your large cargo quickly and reliably.') ?></p>
                 </div>
             </div>
         </div>
@@ -55,15 +56,15 @@
             <div class="card h100-p">
                 <div class="card-body">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/refresh.png', ['alt' => 'logo', 'class' => 'birun-service-icon']) ?>
-                    <p class="birun-blue-text">Doimiy mijozlar uchun keshbek</p>
-                    <p class="birun-gray-text w70-p">Biz bilan yetkazib berish – yanada foydaliroq!</p>
+                    <p class="birun-blue-text"><?= Yii::t('serv', 'Cashback for loyal customers') ?></p>
+                    <p class="birun-gray-text w70-p"><?= Yii::t('serv', 'Delivery is more profitable with us!') ?></p>
                 </div>
             </div>
         </div>
         <div class="col-md-7">
             <div class="card h100-p card-bg-blue">
                 <div class="card-body card-radius-08 text-center">
-                    <p class="font-size-40p">Siz uchun qulay va ishonchli pochta xizmatlari!</p>
+                    <p class="font-size-40p"><?= Yii::t('serv', 'Convenient and reliable postal services for you!') ?></p>
                 </div>
             </div>
         </div>

@@ -5,15 +5,15 @@ use \yii\bootstrap5\Html;
 <div class="row">
     <div class="col-md-5 p-0">
         <div class="birun-head-text">
-            <h1>Sizning ishonchli hamkoringiz</h1>
-            <p>Endi biz barcha pochta va logistika masalalarida sizning ishonchli yordamchingizmi</p>
+            <h1><?= Yii::t('hero', 'Your reliable partner') ?></h1>
+            <p><?= Yii::t('hero', 'We are your trusted assistant in all postal and logistics matters') ?></p>
             <form class="row g-3 birun-search-barcode">
                 <div class="col-auto">
-                    <label for="searchBarcode" class="visually-hidden">Trek raqamingizni kiriting</label>
-                    <input type="text" class="form-control" id="searchBarcode" placeholder="Trek raqamingizni kiriting" disabled>
+<!--                    <label for="searchBarcode" class="visually-hidden">Trek raqamingizni kiriting</label>-->
+                    <input type="text" class="form-control" placeholder="<?= Yii::t('hero', 'Enter your tracking number') ?>" disabled>
                 </div>
                 <div class="col-auto">
-                    <button type="submit" class="btn btn-search-barcode mb-3" disabled>Qidirish</button>
+                    <button type="submit" class="btn btn-search-barcode mb-3" ><?= Yii::t('hero', 'Search') ?></button>
                 </div>
             </form>
         </div>

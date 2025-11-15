@@ -1,52 +1,46 @@
 <footer>
-    <!-- Top Section -->
     <div class="footer-top mt-5">
         <div class="container">
             <div class="row">
-                <!-- Logo and Description -->
                 <div class="col-lg-3 col-md-6 mb-4">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/logo.png', ['alt' => 'logo', 'class' => '']) ?>
                     <p class="footer-description mt-3">
-                        Endi biz barcha pochta va logistika masalalalarida sizning ishonchli yordamchingizmiz!
+                        <?= Yii::t('order', 'Now we are your reliable assistant in all postal and logistics matters!') ?>
                     </p>
                 </div>
 
-                <!-- Mijozlarga Column -->
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h6 class="footer-heading">Mijozlarga</h6>
+                    <h6 class="footer-heading"><?= Yii::t('order', 'For Customers') ?></h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="footer-link">Oferta</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link">Kalkulyator</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link">Narxlar</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Offer') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Calculator') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Prices') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'FAQ') ?></a></li>
                     </ul>
                 </div>
 
-                <!-- Yuridik shaxslarga Column -->
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h6 class="footer-heading">Yuridik shaxslarga</h6>
+                    <h6 class="footer-heading"><?= Yii::t('order', 'For Legal Entities') ?></h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="footer-link">Shartnoma</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link">Kabinet</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Contract') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Cabinet') ?></a></li>
                     </ul>
                 </div>
 
-                <!-- Kompaniya Column -->
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h6 class="footer-heading">Kompaniya</h6>
+                    <h6 class="footer-heading"><?= Yii::t('order', 'Company') ?></h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="footer-link">Biz haqimizda</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link">Filiallar</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link">Ish soatlarii</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link">Vakansiyalar</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'About us') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Branches') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Working hours') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Vacancies') ?></a></li>
                     </ul>
                 </div>
 
-                <!-- Yordam Column -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h6 class="footer-heading">Yordam</h6>
+                    <h6 class="footer-heading"><?= Yii::t('order', 'Help') ?></h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="footer-link">Bog'lanish</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Contact') ?></a></li>
                     </ul>
                 </div>
             </div>
@@ -59,7 +53,7 @@
 
                 <div class="col-md-6 mb-3 mb-md-0">
                     <p class="footer-copyright">
-                        © 2025 Aktiv Express. Barcha huquqlar himoyalangan.
+                        © 2025 Aktiv Express. <?= Yii::t('order', 'All rights reserved.') ?>
                     </p>
                 </div>
 

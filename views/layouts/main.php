@@ -32,8 +32,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <html lang="<?= Yii::$app->language ?>" class="h-100">
 <head>
     <title><?= Html::encode($this->title) ?></title>
-    <!--  Bootstrap 5.3.8 CSS Link  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!--  Bootstrap Icon CSS Link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!--  Font Awesome Icon CSS Link  -->
@@ -42,12 +40,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--  Bootstrap 5.3.8 CSS Link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <link rel="icon" href="<?= Yii::getAlias('@web') ?>/assets/logos/icon.png" type="image/png">
-    <?php
-    $this->registerCssFile('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css');
-    $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js', ['depends' => \yii\web\JqueryAsset::class]);
-    ?>
+    <link rel="icon" href="<?= Yii::getAlias('@web/assets/logos/icon.png') ?>" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <?php $this->head() ?>
 
@@ -66,37 +63,24 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <!-- Global Footer -->
 <?= $this->render('_footer') ?>
 
-<?php $this->endBody() ?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<?php
-$flash = Yii::$app->session->getFlash('success');
-if ($flash) {
-    $this->registerJs("toastr.success('$flash');");
-}
-?>
-</body>
-</html>
-
-<?php $this->endPage() ?>
-
-<!-- ✅ Modal Structure -->
+<!-- Modal Structure For Login Goes Here -->
 <div class="modal fade" id="loginModal" data-bs-backdrop="true" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content login-modal-content">
 
             <div class="modal-body">
                 <div class="login-container mx-auto">
-                    <h1 class="login-title">Tizimga kiring</h1>
-                    <p class="login-subtitle">Qaytib kelganingizdan xursandmiz!<br>Ma'lumotlaringizni kiriting.</p>
+                    <h1 class="login-title"><?= Yii::t('app', 'Login') ?></h1>
+                    <p class="login-subtitle"><?= Yii::t('app', 'Welcome back! Please enter your details.') ?></p>
 
                     <?php $form = ActiveForm::begin(['id'=>'login-form']); ?>
                     <div class="mb-3">
-                        <label for="phone" class="form-label">Telefon raqam</label>
+                        <label for="phone" class="form-label"><?= Yii::t('app', 'Phone number') ?></label>
                         <?= $form->field($model, 'phone')->textInput(['placeholder'=>"+998", 'autofocus'=>true])->label(false) ?>
                     </div>
 
                     <?= Html::submitButton(
-                        $model->isNewRecord ? 'Tizimga kirish' : '✎ Update',
+                        $model->isNewRecord ? Yii::t('app', 'Login Button') : Yii::t('app', 'Update Button'),
                         ['class' => 'btn btn-login w-100 text-white']
                     ) ?>
                     <?php ActiveForm::end(); ?>
@@ -106,20 +90,21 @@ if ($flash) {
         </div>
     </div>
 </div>
+<!-- Modal Structure For Login Ends Here -->
 
-<script>
-    $("#loginModal form").on("submit", function(e) {
-        e.preventDefault();
 
-        let phone = $("#phone").val();
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<?php
+$flash = Yii::$app->session->getFlash('success');
+if ($flash) {
+    $this->registerJs("toastr.success('$flash');");
+}
+?>
+<?php $this->endBody() ?>
+</body>
+</html>
 
-        $.post("/site/send-otp", { phone: phone }, function(res) {
-            if (res.success) {
-                toastr.success("Kod yuborildi!");
-                // Now show OTP modal
-            } else {
-                toastr.error("Xatolik");
-            }
-        });
-    });
-</script>
+<?php $this->endPage() ?>
+
+
