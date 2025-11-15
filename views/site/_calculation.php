@@ -6,7 +6,7 @@
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="calculation_title fw-bold fs-4 mb-0"><?= Yii::t('calc', 'Where are you sending?')?></h2>
             <button class="btn btn-primary-custom text-white">
-                <i class="fas fa-download me-2"></i>
+                <i class="fas fa-download me-2 d-none d-sm-inline-block d-md-inline-block d-lg-inline-block"></i>
                 <?= Yii::t('calc', 'Rates')?>
             </button>
         </div>

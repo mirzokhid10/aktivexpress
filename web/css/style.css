@@ -89,34 +89,109 @@ body {
     padding-top: 5rem;
 }
 
-.birun-head-text, .birun-head-img {
+/*!* Hero CSS Starts Here *!*/
 
-}
+/*.birun-head-text, .birun-head-img {*/
 
-.birun-head-img img {
-    width: 100%;
-}
+/*}*/
+
+/*.birun-head-img img {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.birun-head-text h1 {*/
+/*    font-size: 4.3rem;*/
+/*}*/
+
+/*.birun-head-text p {*/
+/*    font-size: 20px;*/
+/*    color: #535862;*/
+/*}*/
+
+/*form.birun-search-barcode {*/
+/*    margin-top: 50px;*/
+/*}*/
+
+/*#searchBarcode {*/
+/*    width: 300px;*/
+/*}*/
+
+/*.btn-search-barcode:disabled {*/
+/*    background-color: #FF6010;*/
+/*}*/
+
+/*!* Hero CSS Ends Here *!*/
+
+/* Hero CSS Starts Here */
 
 .birun-head-text h1 {
-    font-size: 4.3rem;
+    font-size: clamp(3rem, 8vw, 4.3rem);
+    margin-bottom: 1rem;
 }
 
 .birun-head-text p {
-    font-size: 20px;
+    font-size: clamp(16px, 4vw, 20px);
     color: #535862;
+    margin-bottom: 1.5rem;
 }
 
 form.birun-search-barcode {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
-#searchBarcode {
-    width: 300px;
+.birun-search-barcode input {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.btn-search-barcode {
+    background-color: #FF6010;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 8px;
+    border: none;
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+.btn-search-barcode:hover {
+    background-color: #e55509;
 }
 
 .btn-search-barcode:disabled {
     background-color: #FF6010;
+    opacity: 0.7;
 }
+
+.birun-head-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 767px) {
+    .birun-head-text {
+        padding: 0 15px;
+    }
+
+    form.birun-search-barcode {
+        margin-top: 20px;
+    }
+
+    .btn-search-barcode {
+        width: 100%;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 991px) {
+    .birun-head-text h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Hero CSS Ends Here */
 
 .btn-search-barcode {
     --bs-btn-color: var(--bs-white);
@@ -136,6 +211,8 @@ form.birun-search-barcode {
     border-radius: 0.8rem;
 }
 
+/* Services CSS Starts Here */
+
 .birun-service-block .card {
 
 }
@@ -148,6 +225,64 @@ form.birun-search-barcode {
     padding: 1.5rem;
 }
 
+.birun-service_img {
+    height: 37vh;
+}
+
+p.font-size-40p {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+p.font-size-32p {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Service Adjustment Starts Here */
+@media (min-width: 768px) and (max-width: 991px) {
+    .birun-service-block .card .card-body {
+        padding: 1.5rem 1rem;
+    }
+
+    birun-service-block .birun-service-icon {
+        margin-bottom: 20px;
+    }
+
+    .birun-service-icon {
+        margin-bottom: 20px;
+    }
+
+    .birun-service_img {
+        height: 32vh;
+    }
+
+    .w70-p {
+        width: 100%;
+    }
+
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .birun-service_img {
+        height: 30vh;
+    }
+}
+
+@media (max-width: 575px) {
+    .birun-service_img {
+        height: 30vh;
+    }
+
+    p.font-size-40p {
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+/* Service Adjustment Ends Here */
+
 .card-bg-blue {
     background-color: #0C28C9;
     color: #FFFFFF;
@@ -157,6 +292,62 @@ form.birun-search-barcode {
     width: 60%;
     margin: 0 20%;
 }
+
+/* Services CSS Ends Here */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Services CSS Starts Here
+
 
 .dropdown-toggle::after {
     display: none;
@@ -178,23 +369,12 @@ form.birun-search-barcode {
     color: #FF6010;
 }
 
-p.font-size-40p {
-    font-size: 40px;
-    font-weight: 600;
-}
 
 p.font-size-32p {
     font-size: 32px;
     font-weight: 600;
 }
 
-.birun-service-block .birun-service-icon {
-    margin-bottom: 40px;
-}
-
-.w70-p {
-    width: 70%;
-}
 .h100-p {
     height: 100%;
 }
@@ -557,3 +737,9 @@ input[type="number"] {
 }
 
 /* Footer CSS Ends Here */
+
+/* Drop Down Arrow Remove Css Starts Here */
+.dropdown-toggle::after {
+    display: none;
+}
+/* Drop Down Arrow Remove Css Ends Here */

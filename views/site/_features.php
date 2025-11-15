@@ -4,7 +4,7 @@
     <div class="card">
         <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-6 col-lg-3 ">
                 <div class="birun-service-card">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/run.png', ['alt' => 'logo']) ?>
                     <p class="birun-blue-text"><?= Yii::t('feat', 'Delivery speed - starting from 24 hours') ?></p>
@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-6 col-lg-3 ">
                 <div class="birun-service-card">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/business.png', ['alt' => 'logo']) ?>
                     <p class="birun-blue-text"><?= Yii::t('feat', 'Flexible prices for entrepreneurs') ?></p>
@@ -20,7 +20,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-6 col-lg-3 ">
                 <div class="birun-service-card">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/gps_sticker.png', ['alt' => 'logo']) ?>
                     <p class="birun-blue-text"><?= Yii::t('feat', 'Accurate parcel tracking') ?></p>
@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-6 col-lg-3 ">
                 <div class="birun-service-card">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/store.png', ['alt' => 'logo']) ?>
                     <p class="birun-blue-text"><?= Yii::t('feat', 'Wide capabilities for online stores') ?></p>

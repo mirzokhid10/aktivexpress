@@ -14,7 +14,7 @@ return [
     'Come to our offices and use the services in person.' => 'Bizning ofislarimizga kelib, xizmatlardan shaxsan foydalaning.',
 
     //    Partners Translation Starts Here
-    'Clients who trusted us' => 'Клиенты, которые нам доверяют',
+    'Clients who trusted us' => 'Bizga ishonch bildirgan mijozlar',
 
     //  Contact Translation Starts Here
     'Contact us and working hours' => "Biz bilan bog'lanish va ish soatlari",
