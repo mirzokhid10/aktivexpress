@@ -12,35 +12,35 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h6 class="footer-heading"><?= Yii::t('order', 'For Customers') ?></h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Offer') ?></a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Calculator') ?></a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Prices') ?></a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'FAQ') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'Offer') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'Calculator') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'Prices') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'FAQ') ?></a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h6 class="footer-heading"><?= Yii::t('order', 'For Legal Entities') ?></h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Contract') ?></a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Cabinet') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'Contract') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'Cabinet') ?></a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h6 class="footer-heading"><?= Yii::t('order', 'Company') ?></h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'About us') ?></a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Branches') ?></a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Working hours') ?></a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Vacancies') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'About us') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'Branches') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'Working hours') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'Vacancies') ?></a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h6 class="footer-heading"><?= Yii::t('order', 'Help') ?></h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="footer-link"><?= Yii::t('order', 'Contact') ?></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link custom-gray"><?= Yii::t('order', 'Contact') ?></a></li>
                     </ul>
                 </div>
             </div>

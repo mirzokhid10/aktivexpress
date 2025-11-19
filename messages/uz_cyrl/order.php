@@ -49,4 +49,19 @@ return [
     'Contact' => 'Боғланиш',
     'All rights reserved.' => 'Барча ҳуқуқлар ҳимояланган.',
     //  Footer Translation Starts Here
+
+    // Tracking Translation Starts Here
+    'Sender' => 'Юборувчи',
+    'Receiver' => 'Қабул қилувчи',
+    'Sender Name' => 'Юборувчи исми',
+    'Sender Region' => 'Юборувчи ҳудуди',
+    'Sender District' => 'Юборувчи тумани',
+    'Sender Branch' => 'Юборувчи филиали',
+    'Recipient Label' => 'Қабул қилувчи',
+    'Recipient Name' => 'Қабул қилувчи исми',
+    'Recipient Region' => 'Қабул қилувчи ҳудуди',
+    'Recipient District' => 'Қабул қилувчи тумани',
+    'Recipient Branch' => 'Қабул қилувчи филиали',
+    'Tracking History' => 'Жўнатмаларимни тарихи',
+    // Tracking Translation Ends Here
 ];

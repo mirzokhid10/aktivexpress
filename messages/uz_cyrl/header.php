@@ -1,12 +1,14 @@
 <?php
 
 return [
+    'Main' => 'Асоcий',
     'About us' => 'Биз хақимизда',
     'For legal entities' => 'Юридик шахсларга',
     'Services' => 'Хизматлар',
     'Prices' => 'Нархлар',
     'Our addresses' => 'Манзилларимиз',
     'Contact' => 'Алоқа',
+    'My Orders' => 'Буюртмаларим',
     'Login' => 'Тизимга кириш',
 
     'Express Delivery' => 'Экспресс етказиш',

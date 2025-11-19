@@ -12,7 +12,7 @@
 
                     <p class="contact-us-title text-start"><?= Yii::t('order', 'Our phone numbers:') ?></p>
                     <div class="row mt-4">
-                        <div class="col-md-6">
+                        <div class="col-md-6 d-flex flex-column justify-content-between">
                             <p class="contact-us-title-mini"><?= Yii::t('order', 'Main contact:') ?></p>
                             <p class="contact-us-phone">+998 93 184 77 33</p>
                         </div>
@@ -56,7 +56,7 @@
                     </div>
                     <div>
                         <p class="contact-us-title"><?= Yii::t('order', 'Head office address') ?></p>
-                        <p class="contact-us-phone" style="font-size: 18px; line-height: 1.4;"><?= Yii::t('order', "Kichik halqa yo'li 10, Boshlik/Qushbegi") ?></p>
+                        <p class="contact-us-phone" style="font-size: 18px; line-height: 1.4;"><?= Yii::t('order', "9-10, Dilxush 1 st, Sergeli District, Tashkent") ?></p>
                     </div>
                 </div>
             </div>
@@ -69,10 +69,10 @@
                     </div>
                     <div>
                         <p class="contact-us-title"><?= Yii::t('order', 'Email and social networks:') ?></p>
-                        <p class="contact-us-link"><a href="https://facebook.com">facebook</a></p>
-                        <p class="contact-us-link"><a href="https://instagram.com">instagram</a></p>
-                        <p class="contact-us-link"><a href="https://twitter.com">twitter</a></p>
-                        <p class="contact-us-link"><a href="https://linkedin.com">linkedin</a></p>
+                        <p class="contact-us-link"><a href="https://www.facebook.com/aktivexpress/">facebook</a></p>
+                        <p class="contact-us-link"><a href="https://www.instagram.com/aktivexpress/">instagram</a></p>
+                        <p class="contact-us-link"><a href="https://x.com/aktivexpress">twitter</a></p>
+                        <p class="contact-us-link"><a href="https://www.linkedin.com/company/aktivexpress/?originalSubdomain=uz">linkedin</a></p>
                     </div>
                 </div>
             </div>

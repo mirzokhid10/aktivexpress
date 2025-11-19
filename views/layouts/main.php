@@ -26,6 +26,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -43,8 +44,20 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <!--  Bootstrap 5.3.8 CSS Link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <link rel="icon" href="<?= Yii::getAlias('@web/assets/logos/icon.png') ?>" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Browser Tab Icon And Title Favicon -->
+    <link rel="icon" type="image/x-icon" href="<?= Yii::getAlias('@web/assets/logos/icons/favicon.ico')?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= Yii::getAlias('@web/assets/logos/icons/favicon-32x32.png')?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= Yii::getAlias('@web/assets/logos/icons/favicon-16x16.png')?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= Yii::getAlias('@web/assets/logos/icons/apple-touch-icon.png')?>">
+
+    <!--  Data Table CSS Link  -->
+    <!-- DataTables (Bootstrap5 integration) CSS -->
+<!--    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css" />
+
+
 
     <?php $this->head() ?>
 
@@ -54,7 +67,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <!-- Global Header -->
 <?= $this->render('_header') ?>
 <main id="main" class="flex-shrink-0" role="main">
+
     <div class="container">
+
+
         <?= $content ?>
     </div>
 </main>
@@ -90,18 +106,20 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </div>
     </div>
 </div>
-<!-- Modal Structure For Login Ends Here -->
 
+<!-- Jquery JS Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<?php
-$flash = Yii::$app->session->getFlash('success');
-if ($flash) {
-    $this->registerJs("toastr.success('$flash');");
-}
-?>
 <?php $this->endBody() ?>
+
+<script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.datatable').DataTable({
+            info: false,
+        });
+    });
+</script>
 </body>
 </html>
 

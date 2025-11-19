@@ -1,12 +1,15 @@
 <?php
 
 return [
+    'Main' => 'Main',
     'About us' => 'About us',
     'For legal entities' => 'For legal entities',
     'Services' => 'Services',
     'Prices' => 'Prices',
     'Our addresses' => 'Our addresses',
+    'My Orders' => 'Мои заказы',
     'Contact' => 'Contact',
+
     'Login' => 'Login',
 
     'Express Delivery' => 'Express Delivery',

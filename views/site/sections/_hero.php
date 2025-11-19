@@ -2,7 +2,7 @@
 use \yii\bootstrap5\Html;
 ?>
 
-<div class="row d-flex align-items-center justify-content-between gap-5 gap-md-0">
+<div class="hero-main row d-flex align-items-center justify-content-between gap-5 gap-md-0">
     <div class="col-12 col-md-5 p-0 text-center text-md-start order-1 order-md-1">
         <div class="birun-head-text">
             <h1><?= Yii::t('hero', 'Your reliable partner') ?></h1>

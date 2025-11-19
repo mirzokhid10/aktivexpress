@@ -26,7 +26,7 @@ return [
     'Working hours:' => 'Время работы:',
     'Monday - Sunday' => 'Понедельник - Воскресенье',
     'Head office address' => 'Адрес главного офиса',
-    "Kichik halqa yo'li 10, Boshlik/Qushbegi" => "ул. Кичик халка йули 10, Бошлик/Кушбеги",
+    "9-10, Dilxush 1 st, Sergeli District, Tashkent" => "Ташкент, район Сергели, улица Дилхуш 1, дом 9–10",
     'Email and social networks:' => 'Email и социальные сети:',
     //  Contact Translation Ends Here
 
@@ -49,5 +49,22 @@ return [
     'Contact' => 'Контакты',
     'All rights reserved.' => 'Все права защищены.',
     //  Footer Translation Starts Here
+
+    // Tracking Translation Starts Here
+    'Sender' => 'Отправитель',
+    'Receiver' => 'Получатель',
+    'Sender Name' => 'Имя отправителя',
+    'Sender Region' => 'Регион отправителя',
+    'Sender District' => 'Район отправителя',
+    'Sender Branch' => 'Филиал отправителя',
+    'Recipient Label' => 'Получатель',
+    'Recipient Name' => 'Имя получателя',
+    'Recipient Region' => 'Регион получателя',
+    'Recipient District' => 'Район получателя',
+    'Recipient Branch' => 'Филиал получателя',
+    'Tracking History' => 'История моих отправлений',
+
+
+    // Tracking Translation Ends Here
 
     ];

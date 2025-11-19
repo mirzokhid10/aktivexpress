@@ -3,13 +3,16 @@
 // Translation file for Russian (ru)
 
 return [
+    'Main' => 'Главная',
     'About us' => 'О нас',
     'For legal entities' => 'Юридическим лицам',
     'Services' => 'Услуги',
     'Prices' => 'Цены',
     'Our addresses' => 'Наши адреса',
     'Contact' => 'Контакт',
+    'My Orders' => 'Мои заказы',
     'Login' => 'Войти', // или 'Вход'
+
 
     'Express Delivery' => 'Экспресс-доставка',
     'Courier Service' => 'Курьерская служба',

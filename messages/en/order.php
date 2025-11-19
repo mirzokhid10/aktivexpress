@@ -30,7 +30,7 @@ return [
     'Working hours:' => 'Working hours:',
     'Monday - Sunday' => 'Monday - Sunday',
     'Head office address' => 'Head office address',
-    "Kichik halqa yo'li 10, Boshlik/Qushbegi" => "Kichik halqa yo'li 10, Boshlik/Qushbegi", // Keeping specific address names in EN, though usually addresses are not translated
+    "9-10, Dilxush 1 st, Sergeli District, Tashkent" => "9-10, Dilxush 1 st, Sergeli District, Tashkent", // Keeping specific address names in EN, though usually addresses are not translated
     'Email and social networks:' => 'Email and social networks:',
     //  Contact Translation Ends Here
 
@@ -53,4 +53,21 @@ return [
     'Contact' => 'Contact',
     'All rights reserved.' => 'All rights reserved.',
     //  Footer Translation Starts Here
+
+    // Tracking Translation Starts Here
+
+    'Sender' => 'Sender',
+    'Receiver' => 'Receiver',
+    'Sender Name' => 'Sender Name',
+    'Sender Region' => 'Sender Region',
+    'Sender District' => 'Sender District',
+    'Sender Branch' => 'Sender Branch',
+    'Recipient Label' => 'Recipient Label',
+    'Recipient Name' => 'Recipient Name',
+    'Recipient Region' => 'Recipient Region',
+    'Recipient District' => 'Recipient District',
+    'Recipient Branch' => 'Recipient Branch',
+    'Tracking History' => 'History Of My Order',
+
+    // Tracking Translation Ends Here
 ];

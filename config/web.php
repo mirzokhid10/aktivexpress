@@ -77,7 +77,6 @@ $config = [
                     'fileMap' => [
                         'app' => 'header.php',
                         'main' => 'header.php',
-
                     ]
                 ],
                 'hero*' => [
@@ -118,9 +117,30 @@ $config = [
                     'basePath' => '@app/messages',
                     'fileMap' => [
                         'order' => 'order.php',
+
                     ],
                 ],
-
+                'about*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'about' => 'about.php',
+                    ],
+                ],
+                'address*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'address' => 'address.php',
+                    ],
+                ],
+                'myorder*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'myorder' => 'myorder.php',
+                    ],
+                ],
             ]
         ]
 

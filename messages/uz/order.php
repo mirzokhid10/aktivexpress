@@ -25,7 +25,7 @@ return [
     'Working hours:' => 'Ish vaqti:',
     'Monday - Sunday' => 'Dushanba - Yakshanba',
     'Head office address' => 'Bosh ofis manzili',
-    "Kichik halqa yo'li 10, Boshlik/Qushbegi" => "Kichik halqa yo'li 10, Boshlik/Qushbegi",
+    "9-10, Dilxush 1 st, Sergeli District, Tashkent" => "9–10, Dilxush 1-ko‘chasi, Sergeli tumani, Toshkent",
     'Email and social networks:' => 'Email va ijtimoiy tarmoqlar:',
     //  Contact Translation Ends Here
 
@@ -48,4 +48,20 @@ return [
     'Contact' => "Bog'lanish",
     'All rights reserved.' => 'Barcha huquqlar himoyalangan.',
     //  Footer Translation Starts Here
+
+    // Tracking Translation Starts Here
+    'Sender' => 'Yuboruvchi',
+    'Receiver' => 'Qabul qiluvchi',
+    'Sender Name' => 'Yuboruvchi ismi',
+    'Sender Region' => 'Yuboruvchi hududi',
+    'Sender District' => 'Yuboruvchi tumani',
+    'Sender Branch' => 'Yuboruvchi filial',
+    'Recipient Label' => 'Qabul qiluvchi',
+    'Recipient Name' => 'Qabul qiluvchi ismi',
+    'Recipient Region' => 'Qabul qiluvchi hududi',
+    'Recipient District' => 'Qabul qiluvchi tumani',
+    'Recipient Branch' => 'Qabul qiluvchi filial',
+    'Tracking History' => "Jo'natmalar tarixi",
+    // Tracking Translation Ends Here
+
 ];

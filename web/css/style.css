@@ -2,7 +2,87 @@ body {
     background-color: #EAECF5;
 }
 
+.custom-orange {
+    color: #FF6010;
+}
+
+.custom-gray {
+    color: #535862;
+}
+
+.custom-blue {
+    color: #0C27C0;
+}
+
+.custom-green {
+    color: #027A48;
+}
+
+.custom-bg-light {
+    background-color: #ECFDF3;
+    /*#DFFFEA*/
+}
+
+.custom-bg-orange {
+    background-color: #FF6010;
+}
+
+.custom-bg-orange:hover {
+    background-color: #CC4D0D;
+}
+
+.card_icon-img {
+    width: 64px;
+    height: 64px;
+
+}
+
+/************************************************************/
+/* Breadcrumb CSS Starts Here */
+/************************************************************/
+.breadcrumb {
+    background: none;
+    padding: 0;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+
+}
+
+.breadcrumb-item a {
+    color: #717680;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #FF6010;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    padding: 0 0.5rem;
+}
+/************************************************************/
+/* Breadcrumb CSS Ends Here */
+/************************************************************/
+
+.fs-16 {
+    font-size: 16px;
+    line-height: 1.2rem;
+}
+
+.fs-20 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.fs-24 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+/************************************************************/
 /* Header CSS Starts Here */
+/************************************************************/
 
 .header_login-btn {
     background-color: #FF6010;
@@ -12,9 +92,13 @@ body {
     background-color: #CC4D0D;
 }
 
+/************************************************************/
 /* Header CSS Ends Here */
+/************************************************************/
 
+/************************************************************/
 /* Header Pop Up Model CSS Starts Here */
+/************************************************************/
 
 .login-title {
     font-size: 28px;
@@ -72,7 +156,9 @@ body {
     border-radius: 2px;
 }
 
+/************************************************************/
 /* Header Pop Up Model CSS Ends Here */
+/************************************************************/
 
 .birun-nav {
     background-color: #0C27C0;
@@ -89,40 +175,21 @@ body {
     padding-top: 5rem;
 }
 
-/*!* Hero CSS Starts Here *!*/
-
-/*.birun-head-text, .birun-head-img {*/
-
-/*}*/
-
-/*.birun-head-img img {*/
-/*    width: 100%;*/
-/*}*/
-
-/*.birun-head-text h1 {*/
-/*    font-size: 4.3rem;*/
-/*}*/
-
-/*.birun-head-text p {*/
-/*    font-size: 20px;*/
-/*    color: #535862;*/
-/*}*/
-
-/*form.birun-search-barcode {*/
-/*    margin-top: 50px;*/
-/*}*/
-
-/*#searchBarcode {*/
-/*    width: 300px;*/
-/*}*/
-
-/*.btn-search-barcode:disabled {*/
-/*    background-color: #FF6010;*/
-/*}*/
-
-/*!* Hero CSS Ends Here *!*/
-
+/************************************************************/
 /* Hero CSS Starts Here */
+/************************************************************/
+
+.hero-main {
+    padding: 0 12px;
+}
+
+/************************************************************/
+/*!* Hero CSS Ends Here *!*/
+/************************************************************/
+
+/************************************************************/
+/* Hero CSS Starts Here */
+/************************************************************/
 
 .birun-head-text h1 {
     font-size: clamp(3rem, 8vw, 4.3rem);
@@ -169,7 +236,7 @@ form.birun-search-barcode {
     height: auto;
 }
 
-/* Mobile specific adjustments */
+/* Mobile specific adjustments Starts Here*/
 @media (max-width: 767px) {
     .birun-head-text {
         padding: 0 15px;
@@ -191,7 +258,9 @@ form.birun-search-barcode {
     }
 }
 
+/************************************************************/
 /* Hero CSS Ends Here */
+/************************************************************/
 
 .btn-search-barcode {
     --bs-btn-color: var(--bs-white);
@@ -211,11 +280,9 @@ form.birun-search-barcode {
     border-radius: 0.8rem;
 }
 
+/************************************************************/
 /* Services CSS Starts Here */
-
-.birun-service-block .card {
-
-}
+/************************************************************/
 
 .birun-service-block .card, .card-radius-08 {
     border-radius: 0.8rem;
@@ -288,12 +355,32 @@ p.font-size-32p {
     color: #FFFFFF;
 }
 
+
+
+
 .card-bg-blue .card-body {
     width: 60%;
     margin: 0 20%;
 }
 
+/************************************************************/
 /* Services CSS Ends Here */
+/************************************************************/
+
+/************************************************************/
+/* My Orders Data Table CSS Starts Here */
+/************************************************************/
+
+
+div.dt-container .dt-paging .dt-paging-button:hover {
+    color: #FF6010 !important;
+    border: 1px solid #FFEFE7;
+    background: #FFEFE7;
+}
+
+/************************************************************/
+/* My Orders Data Table CSS Ends Here */
+/************************************************************/
 
 
 
@@ -343,10 +430,7 @@ p.font-size-32p {
 
 
 
-
-
-
- Services CSS Starts Here
+ /*Services CSS Starts Here*/
 
 
 .dropdown-toggle::after {
@@ -492,7 +576,9 @@ p.font-size-32p {
 }
 
 
+/************************************************************/
 /* CSS For Calculator*/
+/************************************************************/
 
 
 .calculation_title {
@@ -669,7 +755,10 @@ input[type="number"] {
     margin-left: auto;
 }
 
+
+/************************************************************/
 /* Footer CSS Goes Here */
+/************************************************************/
 
 /* Footer Styles */
 .footer-top {
@@ -692,13 +781,13 @@ input[type="number"] {
     color: #FF6010;
     font-weight: 600;
     margin-bottom: 24px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .footer-link {
     color: #333;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     transition: color 0.3s;
 }
 
@@ -736,10 +825,193 @@ input[type="number"] {
     opacity: 0.8;
 }
 
+/************************************************************/
 /* Footer CSS Ends Here */
+/************************************************************/
 
+/************************************************************/
 /* Drop Down Arrow Remove Css Starts Here */
+/************************************************************/
 .dropdown-toggle::after {
     display: none;
 }
+
+/************************************************************/
 /* Drop Down Arrow Remove Css Ends Here */
+/************************************************************/
+
+/************************************************************/
+/* About Us Slider Css Starts Here */
+/************************************************************/
+
+.gallery-container {
+    padding: 40px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h5 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.gallery-overlay p {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.gallery-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Different heights for visual interest */
+.gallery-item:nth-child(1) img {
+    height: 350px;
+}
+
+.gallery-item:nth-child(2) img {
+    height: 280px;
+}
+
+.gallery-item:nth-child(3) img {
+    height: 350px;
+}
+
+@media (max-width: 768px) {
+    .gallery-item img {
+        height: 250px !important;
+    }
+}
+
+/************************************************************/
+/* About Us Slider Css Ends Here */
+/************************************************************/
+
+/************************************************************/
+/* My Orders Data Table Css Starts Here */
+/************************************************************/
+
+@media (max-width: 992px) {
+    .myorders-main{
+        background-color: transparent !important;
+        border: none;
+        box-shadow: 0 1px 3px transparent;
+    }
+
+    .my-order-card > .card {
+        margin: 0 auto 2rem;
+
+    }
+
+    .birun-myorders-block > .birun-contact-us {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .myorders-main{
+        background-color: transparent !important;
+        border: none;
+        box-shadow: 0 1px 3px transparent;
+    }
+
+    .my-order-card > .card {
+        width: 100% !important;
+        margin: 2rem 0;
+
+    }
+
+    .birun-myorders-block > .birun-contact-us {
+        display: none;
+    }
+}
+
+/************************************************************/
+/* My Orders Data Table Css Ends Here */
+/************************************************************/
+
+/************************************************************/
+/* My Orders Tracking Order History Css Starts Here */
+/************************************************************/
+
+.tracking-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+.timeline-item {
+    position: relative;
+    padding-left: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+.timeline-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 2rem;
+    width: 3px;
+    background-color: #fd7e14;
+}
+.timeline-item:last-child::before {
+    display: none;
+}
+.timeline-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/************************************************************/
+/* My Orders Tracking Order History Css Ends Here */
+/************************************************************/
