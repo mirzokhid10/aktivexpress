@@ -10,6 +10,8 @@ return [
     "Receiver Name" => "Qabul qiluvchining ismi",
     "Status" => "Status",
     "Delivered" => "Yetkazib berildi",
-    "In Progress" => "Jarayonda"
+    "In Progress" => "Jarayonda",
+    'More' => 'Ko‘proq',
+    'Less' => 'Kamroq',
 
 ];

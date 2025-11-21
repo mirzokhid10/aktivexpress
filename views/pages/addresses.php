@@ -11,13 +11,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="birun-address-block">
 
-    <div class="birun-block-header my-5 py-5">
-        <?= yii\bootstrap5\Breadcrumbs::widget([
-            'links' => $this->params['breadcrumbs'] ?? [],
-            'options' => ['class' => 'breadcrumb'], // optional Bootstrap class
-        ]) ?>
-        <h1 class=""><?= Yii::t('address', 'Our Addresses') ?></h1>
-    </div>
+    <?= $this->render('/site/components/_pageHeader', [
+        'title' => Yii::t('address', 'Our Addresses'),
+        'breadcrumbs' => $this->params['breadcrumbs'],
+    ]) ?>
 
     <div class="card">
         <div class="main-card p-4">

@@ -3,12 +3,12 @@
     <h1 class="birun-block-header"><?= Yii::t('serv', 'Our Services') ?></h1>
     <div class="row gap-4 gap-sm-4 gap-md-0">
         <div class="col-md-7">
-            <div class="card">
-                <?= \yii\bootstrap5\Html::img('@web/assets/logos/service_parcel.png', ['class'=>'birun-service_img', 'alt' => 'logo']) ?>
+            <div class="card rounded-2 bg-transparent">
+                <?= \yii\bootstrap5\Html::img('@web/assets/logos/service_parcel.png', ['class'=>'birun-service_img rounded-2 w-100', 'alt' => 'logo']) ?>
             </div>
         </div>
         <div class="col-md-5">
-            <div class="card h100-p">
+            <div class="card h100-p rounded-2">
                 <div class="card-body text-center text-sm-start text-md-start">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/service_box_parcel.png', ['alt' => 'logo', 'class' => ' mb-md-3 mb-lg-5']) ?>
                     <p class="birun-blue-text"><?= Yii::t('serv', 'Safe and secure packaging') ?></p>
@@ -20,7 +20,7 @@
     <br>
     <div class="row gap-4 gap-sm-4 gap-md-0">
         <div class="col-md-4">
-            <div class="card h100-p">
+            <div class="card h100-p rounded-2">
                 <div class="card-body text-center text-sm-start text-md-start">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/programm.png', ['alt' => 'logo', 'class' => 'mb-md-3 mb-lg-5']) ?>
                     <p class="birun-blue-text"><?= Yii::t('serv', 'Convenient payment system') ?></p>
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card h100-p">
+            <div class="card h100-p rounded-2">
                 <div class="card-body text-center text-sm-start text-md-start">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/human.png', ['alt' => 'logo', 'class' => 'mb-md-3 mb-lg-5']) ?>
 
@@ -40,7 +40,7 @@
 
         </div>
         <div class="col-md-4">
-            <div class="card h100-p">
+            <div class="card h100-p rounded-2">
                 <div class="card-body text-center text-sm-start text-md-start">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/transport.png', ['alt' => 'logo', 'class' => 'mb-md-3 mb-lg-5']) ?>
 
@@ -53,7 +53,7 @@
     <br>
     <div class="row gap-4 gap-sm-4 gap-md-0">
         <div class="col-md-5">
-            <div class="card h100-p">
+            <div class="card h100-p rounded-2">
                 <div class="card-body text-center text-sm-start text-md-start">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/refresh.png', ['alt' => 'logo', 'class' => 'mb-md-3 mb-lg-5']) ?>
                     <p class="birun-blue-text"><?= Yii::t('serv', 'Cashback for loyal customers') ?></p>
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="col-md-7">
-            <div class="card h100-p card-bg-blue">
+            <div class="card h100-p card-bg-blue rounded-2">
                 <div class="card-body card-radius-08 text-center ">
                     <p class="font-size-40p"><?= Yii::t('serv', 'Convenient and reliable postal services for you!') ?></p>
                 </div>

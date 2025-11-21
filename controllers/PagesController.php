@@ -18,7 +18,7 @@ class PagesController extends Controller
         return $this->render('addresses');
     }
 
-    public function actionPrice() {
-        return $this->render('price');
+    public function actionTariffs() {
+        return $this->render('tariffs');
     }
 }

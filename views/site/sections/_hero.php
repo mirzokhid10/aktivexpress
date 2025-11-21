@@ -1,5 +1,6 @@
 <?php
 use \yii\bootstrap5\Html;
+use yii\widgets\ActiveForm;
 ?>
 
 <div class="hero-main row d-flex align-items-center justify-content-between gap-5 gap-md-0">
@@ -7,14 +8,24 @@ use \yii\bootstrap5\Html;
         <div class="birun-head-text">
             <h1><?= Yii::t('hero', 'Your reliable partner') ?></h1>
             <p><?= Yii::t('hero', 'We are your trusted assistant in all postal and logistics matters') ?></p>
-            <form class="birun-search-barcode d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-md-start gap-3">
+
+            <?php $form = ActiveForm::begin([
+                'action' => ['/my-orders/search'],
+                'method' => 'get',
+                'options' => ['class' => 'birun-search-barcode d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-md-start gap-3']
+            ]); ?>
                 <div class="flex-grow-1 w-100" style="max-width: 400px;">
-                    <input type="text" class="form-control w-100 mb-sm-0 mb-md-0" placeholder="<?= Yii::t('hero', 'Enter your tracking number') ?>" disabled>
+                    <?= Html::textInput('tracking_number', null, [
+                        'class' => 'form-control w-100 mb-sm-0 mb-md-0',
+                        'placeholder' => Yii::t('hero', 'Enter your tracking number'). ": #019702241279431",
+
+                    ]) ?>
                 </div>
                 <div class="flex-shrink-0">
-                    <button type="submit" class="btn btn-search-barcode w-100"><?= Yii::t('hero', 'Search') ?></button>
+                    <?= Html::submitButton(Yii::t('hero', 'Search'), ['class' => 'btn btn-search-barcode w-100']) ?>
                 </div>
-            </form>
+            <?php ActiveForm::end(); ?>
+
         </div>
     </div>
     <div class="col-12 col-md-7 text-center text-md-start order-2 order-md-2">

@@ -10,5 +10,8 @@ return [
     "Receiver Name" => "Қабул қилувчининг исми",
     "Status" => "Статус",
     "Delivered" => "Етказиб берилди",
-    "In Progress" => "Жараёнда"
+    "In Progress" => "Жараёнда",
+    'More' => 'Кўпроқ',
+    'Less' => 'Камроқ',
+
 ];

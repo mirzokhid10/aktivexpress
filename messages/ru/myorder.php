@@ -10,7 +10,10 @@ return [
     "Receiver Name" => "Имя получателя",
     "Status" => "Статус",
     "Delivered" => "Доставлено",
-    "In Progress" => "В процессе"
+    "In Progress" => "В процессе",
+    'More' => 'Больше',
+    'Less' => 'Меньше',
+
 
 
 ];

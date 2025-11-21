@@ -7,13 +7,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="birun-address-block">
 
-    <div class="birun-block-header my-5 py-5">
-        <?= yii\bootstrap5\Breadcrumbs::widget([
-            'links' => $this->params['breadcrumbs'] ?? [],
-            'options' => ['class' => 'breadcrumb'], // optional Bootstrap class
-        ]) ?>
-        <h1 class=""><?= Yii::t('app', 'About us') ?></h1>
-    </div>
+    <?= $this->render('/site/components/_pageHeader', [
+        'title' => Yii::t('app', 'About us'),
+        'breadcrumbs' => $this->params['breadcrumbs'],
+    ]) ?>
     <div class="card">
         <div class="main-card p-4">
             <div class="mb-5">
@@ -83,7 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="col-12 col-md-5 col-lg-5 d-flex align-items-center justify-content-center card-bg-blue rounded-4 mt-4 mt-sm-4 mt-md-0 mb-sm-0 mb-md-0 p-5 order-2 order-md-1">
                     <img src="<?= Url::to('@web/assets/logos/aktivlogowhite.png') ?>" alt="Company Logo" class="img-fluid">
                 </div>
-                <div class="col-12 col-md-7 col-lg-6 d-flex flex-column justify-content-center order-1 order-md-2 py-5">
+                <div class="col-12 col-md-7 col-lg-6 d-flex flex-column justify-content-center order-1 order-md-2 py-sm-3 py-md-4 py-lg-5">
                     <div class="mb-4">
                         <p class="custom-orange fs-16 mb-2">
                             <?= Yii::t('about', 'We have helped hundreds of companies') ?>
@@ -130,7 +127,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="main-card p-4">
                 <div class="row d-flex align-items-center justify-content-evenly py-4">
 
-                    <div class="col-12 col-sm-12 col-md-3 text-center d-flex flex-column gap-4">
+                    <div class="col-12 col-sm-12 col-md-3 text-center d-flex flex-column text-align-start gap-4">
                         <img class="card_icon-img mx-auto" src="<?= Url::to('@web/assets/logos/icons/home.png') ?>">
                         <h4 class="custom-blue fs-16 fw-bold">
                             <?= Yii::t('about', 'Increasing the number of branches – "Our service is even closer!"') ?>
@@ -140,7 +137,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </p>
                     </div>
 
-                    <div class="col-12 col-sm-12 col-md-3 text-center d-flex flex-column gap-4">
+                    <div class="col-12 col-sm-12 col-md-3 text-center d-flex flex-column text-align-start gap-4">
                         <img class="card_icon-img mx-auto" src="<?= Url::to('@web/assets/logos/icons/user.png') ?>">
                         <h4 class="custom-blue fs-16 fw-bold">
                             <?= Yii::t('about', 'Mobile application for courier services – "Fast and reliable delivery!"') ?>
@@ -150,7 +147,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </p>
                     </div>
 
-                    <div class="col-12 col-sm-12 col-md-3 text-center d-flex flex-column gap-4">
+                    <div class="col-12 col-sm-12 col-md-3 text-center d-flex flex-column text-align-start gap-4">
                         <img class="card_icon-img mx-auto" src="<?= Url::to('@web/assets/logos/icons/mobile.png') ?>">
                         <h4 class="custom-blue fs-16 fw-bold">
                             <?= Yii::t('about', 'Mobile application for customers – "Our services at your fingertips!"') ?>

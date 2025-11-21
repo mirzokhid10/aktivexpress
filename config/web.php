@@ -62,6 +62,8 @@ $config = [
                 'en',
             ],
             'rules' => [
+                '<language:(uz|uz_cyrl|ru|en)>/<controller>/<action>' => '<controller>/<action>',
+                '<language:(uz|uz_cyrl|ru|en)>' => 'site/index',
             ],
         ],
 
@@ -139,6 +141,27 @@ $config = [
                     'basePath' => '@app/messages',
                     'fileMap' => [
                         'myorder' => 'myorder.php',
+                    ],
+                ],
+                'tariffs*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'tariffs' => 'tariffs.php',
+                    ],
+                ],
+                'tgbot*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'tgbot' => 'tgbot.php',
+                    ],
+                ],
+                'faq*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'faq' => 'faq.php',
                     ],
                 ],
             ]

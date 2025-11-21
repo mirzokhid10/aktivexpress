@@ -10,6 +10,7 @@ return [
     "Receiver Name" => "Receiver name",
     "Status" => "Status",
     "Delivered" => "delivered",
-    "In Progress" => "in progress"
-
+    "In Progress" => "in progress",
+    "More" => "More",
+    "Less" => "Less",
 ];

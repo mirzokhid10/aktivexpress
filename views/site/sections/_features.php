@@ -1,9 +1,8 @@
 
 <div class="birun-feature-block">
     <h1 class="birun-block-header"><?= Yii::t('feat', 'Our Capabilities') ?></h1>
-    <div class="card">
+    <div class="card rounded-2">
         <div class="row">
-
             <div class="col-sm-6 col-md-6 col-lg-3 ">
                 <div class="birun-service-card">
                     <?= \yii\bootstrap5\Html::img('@web/assets/logos/run.png', ['alt' => 'logo']) ?>

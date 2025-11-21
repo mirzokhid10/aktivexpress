@@ -1,14 +1,20 @@
+<?php
+
+use \yii\helpers\Url;
+
+?>
+
 <div class="py-4 px-0">
     <h1 class="birun-block-header"><?= Yii::t('calc', 'Calculator') ?></h1>
 
-    <div class="main-card p-4">
+    <div class="main-card p-4 rounded-2">
         <!-- Header Section -->
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="calculation_title fw-bold fs-4 mb-0"><?= Yii::t('calc', 'Where are you sending?')?></h2>
-            <button class="btn btn-primary-custom text-white">
+            <a href="<?= Url::to(['/pages/tariffs']) ?>" class="btn btn-primary-custom text-white">
                 <i class="fas fa-download me-2 d-none d-sm-inline-block d-md-inline-block d-lg-inline-block"></i>
                 <?= Yii::t('calc', 'Rates')?>
-            </button>
+            </a>
         </div>
 
         <!-- Weight and Location Inputs -->
@@ -16,11 +22,11 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3">
                 <label class="form-label fw-medium"><?= Yii::t('calc', 'Load Weight')?></label>
                 <div class="weight-control position-relative">
-                    <button class="weight-btn" style="left: 2px" onclick="decrementWeight()">
+                    <button class="weight-btn text-dark" style="left: 2px" onclick="decrementWeight()">
                         <i class="fas fa-minus"></i>
                     </button>
-                    <input type="number" class="weight-input" id="weight" value="kg">
-                    <button class="weight-btn" style="right: 2px" onclick="incrementWeight()">
+                    <input type="number" class="weight-input text-dark" id="weight" value="kg" placeholder="0">
+                    <button class="weight-btn text-dark" style="right: 2px" onclick="incrementWeight()">
                         <i class="fas fa-plus"></i>
                     </button>
                 </div>

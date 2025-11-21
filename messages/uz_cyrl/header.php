@@ -8,8 +8,11 @@ return [
     'Prices' => 'Нархлар',
     'Our addresses' => 'Манзилларимиз',
     'Contact' => 'Алоқа',
+    'Tariffs' => 'Тарифлар',
     'My Orders' => 'Буюртмаларим',
     'Login' => 'Тизимга кириш',
+    'Calculation' => 'Хисоблаш',
+    'Dashboard' => 'Бошқарув панели',
 
     'Express Delivery' => 'Экспресс етказиш',
     'Courier Service' => 'Курьер хизмати',

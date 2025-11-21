@@ -10,8 +10,11 @@ return [
     'Prices' => 'Цены',
     'Our addresses' => 'Наши адреса',
     'Contact' => 'Контакт',
+    'Tariffs' => 'Тарифы',
     'My Orders' => 'Мои заказы',
     'Login' => 'Войти', // или 'Вход'
+    'Calculation' => 'Расчёт',
+    'Dashboard' => 'Панель управления',
 
 
     'Express Delivery' => 'Экспресс-доставка',

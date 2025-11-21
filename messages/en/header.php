@@ -9,8 +9,10 @@ return [
     'Our addresses' => 'Our addresses',
     'My Orders' => 'Мои заказы',
     'Contact' => 'Contact',
-
+    'Tariffs' => 'Tariffs',
+    'Calculation' => 'Calculation',
     'Login' => 'Login',
+    'Dashboard' => 'Dashboard',
 
     'Express Delivery' => 'Express Delivery',
     'Courier Service' => 'Courier Service',

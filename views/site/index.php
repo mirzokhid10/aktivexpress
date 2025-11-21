@@ -14,5 +14,7 @@ $this->title = 'Aktiv Express';
 
     <?= $this->render('sections/_order_methods') ?>
     <?= $this->render('sections/_partners') ?>
+    <?= $this->render('sections/_tg-bots') ?>
+    <?= $this->render('sections/_faq') ?>
     <?= $this->render('sections/_contact') ?>
 </div>
