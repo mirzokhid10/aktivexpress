@@ -63,15 +63,9 @@ $config = [
             'class' => 'codemix\localeurls\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'languages' => [
-                'uz_cyrl',
-                'uz',
-                'ru',
-                'en',
-            ],
+            'languages' => ['uz_cyrl', 'uz', 'ru','en',],
             'rules' => [
-                '<language:(uz|uz_cyrl|ru|en)>/<controller>/<action>' => '<controller>/<action>',
-                '<language:(uz|uz_cyrl|ru|en)>' => 'site/index',
+                '<language:(en|ru|uz|uz_cyrl)>/<controller>/<action>' => '<controller>/<action>',
             ],
         ],
 

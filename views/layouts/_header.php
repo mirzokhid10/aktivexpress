@@ -78,13 +78,17 @@
 
                 <!-- Login Button or User Avatar -->
                 <?php if (Yii::$app->user->isGuest): ?>
-                    <button type="button" class="btn btn-primary header_login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        <?= Yii::t('app', 'Login') ?>
+                    <button type="button" class="btn btn-primary header_login-btn d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <span><?= Yii::t('app', 'Login') ?></span>
                     </button>
                 <?php else: ?>
-                    <button type="button" class="btn btn-primary header_login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        <?= Yii::t('app', 'Dashboard') ?>
-                    </button>
+                    <?= Html::beginForm(['/site/logout'], 'post')
+                    . Html::submitButton(
+                        '<span>Logout (' . Yii::$app->user->identity->name . ')</span>',
+                        ['class' => 'btn btn-primary header_login-btn', 'encode' => false]
+                    )
+                    . Html::endForm()
+                    ?>
                 <?php endif; ?>
             </div>
         </div>

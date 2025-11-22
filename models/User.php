@@ -16,9 +16,9 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return [
             [['phone'], 'required'],
             [['phone'], 'string', 'max' => 20],
-            [['access_token', 'auth_key'], 'string'],
+            [['access_token', 'auth_key'], 'safe'],
             [['external_id'], 'string', 'max' => 255],
-            [['created_at', 'updated_at'], 'integer']
+            [['created_at', 'updated_at'], 'safe']
         ];
     }
 

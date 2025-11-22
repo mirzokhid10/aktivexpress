@@ -87,7 +87,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 <div id="login-container" class="mx-auto">
                     <!-- Subtitle -->
                     <p class="login-subtitle" id="login-subtitle">
-                        <?= Yii::t('app', 'Welcome back! Please enter your details.') ?>
+                        <?= Yii::t('app', 'Welcome back! Please enter your details') ?>
                     </p>
 
                     <!-- Alert Messages -->
@@ -120,8 +120,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <div class="mb-3 d-none" id="code-input-container">
                         <label for="code" class="form-label"><?= Yii::t('app', 'SMS Code') ?></label>
 
-                        <input type="text" id="code-input" name="code" class="form-control" maxlength="6" placeholder="
-                        <?= Yii::t('app', 'Enter SMS code') ?>">
+                        <input type="text" id="code-input" name="code" class="form-control"
+                               maxlength="6" placeholder="<?= Yii::t('app', 'Enter SMS code') ?>">
                     </div>
 
                     <?= Html::submitButton(Yii::t('app', 'Send SMS Code'), [
@@ -145,178 +145,22 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
-    const loginModal = document.getElementById("loginModal");
+    const loginPhoneUrl = '<?= \yii\helpers\Url::to(['site/login-phone']) ?>';
+    const loginCodeUrl  = '<?= \yii\helpers\Url::to(['site/login-code']) ?>';
+    const csrfToken     = '<?= Yii::$app->request->csrfToken ?>';
 
-    loginModal.addEventListener("shown.bs.modal", function () {
-        console.log("Login modal opened");
+    const invalidPhone = '<?= Yii::t('app', 'Invalid phone format. Use: 998XXXXXXXXX') ?>';
+    const connectionError = '<?= Yii::t('app', 'Connection error. Try again.') ?>';
+    const smsSent = '<?= Yii::t('app', 'SMS code sent successfully!') ?>';
+    const invalidCode = '<?= Yii::t('app', 'Please enter the 5-digit SMS code') ?>';
+    const loginSuccess = '<?= Yii::t('app', 'Login successful!') ?>';
+    const smsSendCode = '<?= Yii::t('app', 'Send SMS Code') ?>';
+    const welComeTitle = '<?= Yii::t('app', 'Welcome back! Please enter your details.') ?>';
+    const verifyAndLogin = '<?= Yii::t('app', 'Verify & Login') ?>';
 
-        const form = document.getElementById('login-form');
-        const phoneInput = document.getElementById('phone-input');
-        const codeInput = document.getElementById('code-input');
-        const codeContainer = document.getElementById('code-input-container');
-        const submitBtn = document.getElementById('submit-btn');
-        const subtitle = document.getElementById('login-subtitle');
-        const phoneHint = document.getElementById('phone-hint');
-        const changePhoneLink = document.getElementById('change-phone-link');
-        const resetPhoneBtn = document.getElementById('reset-phone');
-        const alertBox = document.getElementById('login-alert');
-
-        let currentStep = 'phone';
-        let userPhone = '';
-
-        // Updated regex to match format 998XXXXXXXXX
-        const phoneRegex = /^998[0-9]{9}$/;
-
-        function showAlert(message, type='danger') {
-            alertBox.className = `alert alert-${type}`;
-            alertBox.textContent = message;
-            alertBox.classList.remove('d-none');
-            setTimeout(() => alertBox.classList.add('d-none'), 5000);
-        }
-
-        function switchToCodeStep(phone) {
-            console.log("Switching to CODE STEP");
-            currentStep = 'code';
-            userPhone = phone;
-
-            phoneInput.setAttribute('readonly', true);
-            phoneHint.classList.add('d-none');
-
-            codeContainer.classList.remove('d-none');
-            codeInput.focus();
-
-            submitBtn.textContent = 'Verify & Login';
-            subtitle.innerHTML = `We sent a code to <strong>${phone}</strong>`;
-            changePhoneLink.classList.remove('d-none');
-        }
-
-        function resetToPhoneStep() {
-            currentStep = 'phone';
-            userPhone = '';
-
-            phoneInput.removeAttribute('readonly');
-            phoneInput.value = '';
-            phoneHint.classList.remove('d-none');
-
-            codeContainer.classList.add('d-none');
-            codeInput.value = '';
-
-            submitBtn.textContent = 'Send SMS Code';
-            subtitle.textContent = 'Welcome back! Please enter your details.';
-            changePhoneLink.classList.add('d-none');
-            alertBox.classList.add('d-none');
-
-            phoneInput.focus();
-        }
-
-        if (!form._listenerAttached) {
-            form._listenerAttached = true;
-
-            form.addEventListener('submit', async function(e) {
-                e.preventDefault();
-
-                submitBtn.disabled = true;
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = 'Loading...';
-
-                const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-
-                if (currentStep === 'phone') {
-                    const phone = phoneInput.value.trim();
-
-                    if (!phoneRegex.test(phone)) {
-                        showAlert('Invalid phone format. Use: 998XXXXXXXXX');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = originalText;
-                        return;
-                    }
-
-                    try {
-                        const formData = new URLSearchParams();
-                        formData.append('phone', phone);
-
-                        const response = await fetch('<?= \yii\helpers\Url::to(['site/login-phone']) ?>', {
-                            method: 'POST',
-                            headers: {
-                                'X-Requested-With': 'XMLHttpRequest',
-                                'Content-Type': 'application/x-www-form-urlencoded',
-                                'X-CSRF-Token': csrfToken
-                            },
-                            body: formData.toString()
-                        });
-
-                        const data = await response.json();
-                        console.log("Phone response:", data);
-
-                        if (data.success) {
-                            showAlert(data.message, 'success');
-                            switchToCodeStep(phone);
-                        } else {
-                            showAlert(data.message, 'danger');
-                        }
-                    } catch (err) {
-                        console.error("Phone request error:", err);
-                        showAlert('Connection error. Try again.', 'danger');
-                    }
-
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Send SMS Code';
-
-                } else if (currentStep === 'code') {
-                    const code = codeInput.value.trim();
-
-                    // API sends 5 digit codes
-                    if (code.length !== 5 || !/^\d+$/.test(code)) {
-                        showAlert('Please enter the 5-digit SMS code', 'danger');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = originalText;
-                        return;
-                    }
-
-                    try {
-                        const formData = new URLSearchParams();
-                        formData.append('phone', userPhone);
-                        formData.append('code', code);
-
-                        const response = await fetch('<?= \yii\helpers\Url::to(['site/login-code']) ?>', {
-                            method: 'POST',
-                            headers: {
-                                'X-Requested-With': 'XMLHttpRequest',
-                                'Content-Type': 'application/x-www-form-urlencoded',
-                                'X-CSRF-Token': csrfToken
-                            },
-                            body: formData.toString()
-                        });
-
-                        const data = await response.json();
-                        console.log("Code response:", data);
-
-                        if (data.success) {
-                            showAlert(data.message, 'success');
-                            setTimeout(() => {
-                                window.location.href = data.redirect;
-                            }, 800);
-                        } else {
-                            showAlert(data.message, 'danger');
-                            submitBtn.disabled = false;
-                            submitBtn.textContent = originalText;
-                        }
-                    } catch (err) {
-                        console.error("Code request error:", err);
-                        showAlert('Connection error. Try again.', 'danger');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = originalText;
-                    }
-                }
-            });
-
-            resetPhoneBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                resetToPhoneStep();
-            });
-        }
-    });
 </script>
+
+<?php $this->registerJsFile('@web/js/login.js', ['depends' => [\yii\web\JqueryAsset::class]]); ?>
 
 <?php $this->endBody() ?>
 
