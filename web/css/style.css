@@ -50,6 +50,35 @@ body {
 }
 
 /************************************************************/
+/* SMS Code Model CSS Starts Here */
+/************************************************************/
+
+#phone-input-container input[readonly] {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+
+#code-input-container {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/************************************************************/
+/* SMS Code Model CSS Ends Here */
+/************************************************************/
+
+
+/************************************************************/
 /* Breadcrumb CSS Starts Here */
 /************************************************************/
 .breadcrumb {

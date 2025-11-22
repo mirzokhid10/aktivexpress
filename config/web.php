@@ -27,8 +27,12 @@ $config = [
             'class' => 'yii\web\Session',
         ],
 
+        'httpClient' => [
+            'class' => 'yii\httpclient\Client',
+        ],
+
         'user' => [
-            'identityClass' => 'app\models\Users',
+            'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
@@ -46,6 +50,10 @@ $config = [
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error', 'warning', 'info'],
+                    'logFile' => '@runtime/logs/app.log',
+
                 ],
             ],
         ],
@@ -188,6 +196,10 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
+        'allowedIPs' => ['127.0.0.1', '::1'],
+        'panels' => [
+            'ajax' => false, // disable ajax toolbar
+        ],
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
